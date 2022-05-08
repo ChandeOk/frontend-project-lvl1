@@ -1,0 +1,9 @@
+name: eslint-action
+
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: action/setup-node@v2
+      -run: make lint
