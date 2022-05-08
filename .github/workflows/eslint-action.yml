@@ -5,5 +5,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/setup-node@v2
+      - uses: action/checkout@v2
       - run: make lint
