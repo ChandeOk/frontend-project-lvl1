@@ -35,3 +35,16 @@ export const getGCD = (num1, num2) => {
   }
   return gcd;
 };
+export const generateRandomProgression = (length) => {
+  const arr = [];
+  const random = randomNum();
+  let randomStart = randomNum();
+  for (let i = 0; i < length; i += 1) {
+    randomStart += random;
+    arr.push(randomStart);
+  }
+  const randomIndex = Math.floor(Math.random() * length);
+  const answer = arr[randomIndex];
+  arr[randomIndex] = '..';
+  return [arr.join(' '), answer];
+};
