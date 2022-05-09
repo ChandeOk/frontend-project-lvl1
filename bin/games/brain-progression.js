@@ -17,7 +17,7 @@ do {
   const question = `Qestion: ${progression}`;
   askQuestion(question);
   const answer = readAnswer();
-  isAnswerCorrect = checkAnswer(answer, correctAnswer.toString());
+  isAnswerCorrect = checkAnswer(answer, correctAnswer.toString(), name);
   if (isAnswerCorrect) score += 1;
 } while (isAnswerCorrect && score < scoreToWin);
 if (score === scoreToWin) console.log(`Congratulations, ${name}!`);

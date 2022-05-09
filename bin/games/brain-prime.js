@@ -18,7 +18,7 @@ do {
   const answer = readAnswer();
   const isPrime = checkIsPrime(num);
   const correctAnswer = isPrime ? 'yes' : 'no';
-  isAnswerCorrect = checkAnswer(answer, correctAnswer);
+  isAnswerCorrect = checkAnswer(answer, correctAnswer, name);
   if (isAnswerCorrect) score += 1;
 } while (isAnswerCorrect && score < scoreToWin);
 if (score === scoreToWin) console.log(`Congratulations, ${name}!`);

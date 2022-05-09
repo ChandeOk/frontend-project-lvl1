@@ -18,7 +18,7 @@ do {
   askQuestion(question);
   const answer = readAnswer();
   const correctAnswer = getGCD(num1, num2).toString();
-  isAnswerCorrect = checkAnswer(answer, correctAnswer);
+  isAnswerCorrect = checkAnswer(answer, correctAnswer, name);
   if (isAnswerCorrect) score += 1;
 } while (score < scoreToWin && isAnswerCorrect);
 if (score === scoreToWin) console.log(`Congratulations, ${name}!`);

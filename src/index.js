@@ -5,12 +5,13 @@ export const askQuestion = (question) => {
   console.log(question);
 };
 export const readAnswer = () => readlineSync.question('Your answer: ');
-export const checkAnswer = (userAnswer, correctAnswer) => {
+export const checkAnswer = (userAnswer, correctAnswer, name) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
     return true;
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+  console.log(`Let's try again, ${name}!`);
   return false;
 };
 export const getRandomOperator = () => {
