@@ -14,7 +14,7 @@ let isAnswerCorrect;
 do {
   const randomLength = Math.floor(Math.random() * 6 + 5);
   const [progression, correctAnswer] = generateRandomProgression(randomLength);
-  const question = `Qestion: ${progression}`;
+  const question = `Question: ${progression}`;
   askQuestion(question);
   const answer = readAnswer();
   isAnswerCorrect = checkAnswer(answer, correctAnswer.toString(), name);
